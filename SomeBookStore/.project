@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>SomeBookStore</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>site</name>
+			<type>2</type>
+			<locationURI>$%7BROOT_LOC%7D/2014.Q3/Database%20Systems/Unit%203/ECommerce%20Website</locationURI>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>ROOT_LOC</name>
+			<value>$%7BPARENT-1-WORKSPACE_LOC%7D</value>
+		</variable>
+	</variableList>
+</projectDescription>
