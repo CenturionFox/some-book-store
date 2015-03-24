@@ -1,0 +1,11 @@
+Omitted folders:
+
+/book/
+
+Omitted Files:
+
+/book/978-0385477055.png
+/book/978-0439139595.png
+/book/978-0553473599.png
+/book/978-0571056866.png
+/book/978-0747560722.png

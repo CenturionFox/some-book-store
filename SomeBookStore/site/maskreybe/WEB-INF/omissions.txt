@@ -1,0 +1,9 @@
+Omitted Folders:
+
+/classes/*
+/lib/
+
+Omitted Files:
+
+/classes/*
+/lib/commons-io-2.4.jar

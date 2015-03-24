@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"  "http://java.sun.com/j2ee/dtds/web-app_2_3.dtd">
+
+<web-app>
+
+<!-- E-Commerce Updates (edu.pti.students.bem9.bookstore.ecommerce.UpdateCartItem -->
+	
+	<!-- updateCartItem -->
+	<servlet>
+		<servlet-name>updateCartItem</servlet-name>
+		<description>
+			Updates the user cart contents.
+			
+			This servlet should be called from the page {content-dir}/jsp/cart.jsp
+				when the user presses the "Update Quantities" button on the site.
+			This servlet uses the information supplied by the current user session and the
+				fields within the cart item's specific form to change the number of a single
+				type of item that a user is ordering.
+		</description>
+		<servlet-class>edu.pti.students.bem9.bookstore.ecommerce.UpdateCartItem</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateCartItem</servlet-name>
+		<url-pattern>/updateCartItem.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- checkout -->
+	<servlet>
+		<servlet-name>checkout</servlet-name>
+		<description>
+			Handles the end of a sale.
+			Submits all cart and session information for review.  The user will review the
+				information submitted on the next page, and will be able to select a mailing address
+				and credit card information should they choose to do so.
+		</description>
+		<servlet-class>edu.pti.students.bem9.bookstore.ecommerce.CheckOut</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>checkout</servlet-name>
+		<url-pattern>/checkout.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- submitOrder -->
+	<servlet>
+		<servlet-name>submitOrder</servlet-name>
+		<description>
+			Finalizes and submits an order.
+		</description>
+		<servlet-class>edu.pti.students.bem9.bookstore.ecommerce.SubmitOrder</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>submitOrder</servlet-name>
+		<url-pattern>/submitOrder.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- addBookToCart -->
+	<servlet>
+		<servlet-name>addBookToCart</servlet-name>
+		<description>
+			Handles adding books to the cart.
+		</description>
+		<servlet-class>edu.pti.students.bem9.bookstore.ecommerce.AddBookToCart</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addBookToCart</servlet-name>
+		<url-pattern>/addToCart.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- search -->
+	<servlet>
+		<servlet-name>search</servlet-name>
+		<description>
+			Handles user registration functions.
+		</description>
+		<servlet-class>edu.pti.students.bem9.bookstore.ecommerce.Search</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>search</servlet-name>
+		<url-pattern>/search.do</url-pattern>
+	</servlet-mapping>
+	
+<!-- User Account Management (edu.pti.students.bem9.bookstore.acctmgmt -->
+
+	<!-- register -->
+	<servlet>
+		<servlet-name>register</servlet-name>
+		<description>
+			Handles user registration functions.
+		</description>
+		<servlet-class>edu.pti.students.bem9.bookstore.acctmgmt.RegisterUser</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>register</servlet-name>
+		<url-pattern>/register.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- logIn -->
+	<servlet>
+		<servlet-name>logIn</servlet-name>
+		<description>
+			Handles user log in functions through the header include.
+		</description>
+		<servlet-class>edu.pti.students.bem9.bookstore.acctmgmt.LogInUser</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logIn</servlet-name>
+		<url-pattern>/login.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- logOut -->
+	<servlet>
+		<servlet-name>logOut</servlet-name>
+		<description>
+			Handles log out functions through the header include.
+		</description>
+		<servlet-class>edu.pti.students.bem9.bookstore.acctmgmt.LogOutUser</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logOut</servlet-name>
+		<url-pattern>/logout.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- updateInformation -->
+	<servlet>
+		<servlet-name>updateInfo</servlet-name>
+		<description>
+			Handles user information updates.
+		</description>
+		<servlet-class>edu.pti.students.bem9.bookstore.acctmgmt.UpdateUser</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateInfo</servlet-name>
+		<url-pattern>/updateInfo.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- addNewAddress -->
+	<servlet>
+		<servlet-name>addNewAddress</servlet-name>
+		<description>
+			Adds a new address for the current user.
+		</description>
+		<servlet-class>edu.pti.students.bem9.bookstore.acctmgmt.AddressAdd</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addNewAddress</servlet-name>
+		<url-pattern>/addressInsert.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- updateAddress -->
+	<servlet>
+		<servlet-name>updateAddress</servlet-name>
+		<description>
+			Updates the current selected address.
+		</description>
+		<servlet-class>edu.pti.students.bem9.bookstore.acctmgmt.AddressUpdate</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>	
+	<servlet-mapping>
+		<servlet-name>updateAddress</servlet-name>
+		<url-pattern>/addressUpdate.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- removeAddress -->
+	<servlet>
+		<servlet-name>removeAddress</servlet-name>
+		<description>
+			Removes the current address.
+		</description>
+		<servlet-class>edu.pti.students.bem9.bookstore.acctmgmt.AddressRemove</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>removeAddress</servlet-name>
+		<url-pattern>/addressRemove.do</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
